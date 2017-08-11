@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
+
 	<div class="j-nav">
 		<h4>Nombre de Pelicula</h4>
 	</div>
@@ -26,6 +27,20 @@
 	</section>
 	<div class="j_show container"></div>
 <!-- TERMINA SECCION NOMBRE TITULO-->
+
+
+<section>
+	<select class="browser-default m_select">
+	    <option value="" disabled selected>Choose your option</option>
+	    <option value="1">Director</option>
+	    <option value="2">Otro</option>
+	    <option value="3">Category</option>
+	</select>
+	<input class="m_input" type="text" name="d" hidden="hidden" pk="1" style="display: inline-block;font-size: 3em;">
+	<button class="m_btn btn center-align">Show</button>
+</section>
+	<div class="m_show container"></div>
+
 
 
 	<script src="dist/js/script.js"></script>
