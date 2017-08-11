@@ -1,6 +1,36 @@
 *{
 	margin: 0;
 	padding: 0;
+	
+}
+body{
+	.container-inicio{
+		background-image: url("/dist/img/imagen-login.jpg");
+		background-size: cover;
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-position: center left;
+		.container{
+			background-color: rgba(215,44,44,0.3);
+			height: 97vh;
+			width: 100%;
+			color: whitesmoke;
+			h1{
+				font-size: 28px;
+				margin-top: 180px;
+			}
+			button{
+				width: 250px;
+				margin-top: 10px;
+			}
+			a{
+				color: whitesmoke;
+				
+			}
+		}
+	}
+}
+
 	font-family: 'Anton', sans-serif;
 }
 .m_select{
@@ -35,3 +65,4 @@
 	}
 }
 }
+
