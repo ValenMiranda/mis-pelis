@@ -33,6 +33,7 @@ var boton = document.getElementById("boton");
 */
 
 /*Comienza seccion nombre de titulo*/
+/*
 $(document).ready(function(){
 	$(".j_select").change(function(){
 		var j_dir = $(".j_select").val();
@@ -70,4 +71,4 @@ $(document).ready(function(){
 			
 	});
 
-});
+});*/

@@ -1,22 +1,15 @@
 
-$(document).ready(function() {
-	films.forEach(function(e){
-		var contenedor = $('<div/>');
-
-		contenedor.append('<div class="col s6"><img class="responsive-img" src="'+e.poster+'"></div></div>');
-		$(".pictures").append(contenedor);
-	});
-
-
-	
-});
-
 $( document ).ready(function(){
 	$(".button-collapse").sideNav();
 
 	$('#cuenta').click(function(){
 		document.location.href = "create-account.html";
-	})
+	});
+
+	$('#account').click(function(){
+		document.location.href = "index-dos.html";
+	});
+
 
 /* VALIDACIONES */
 var nombre = /[0-9]/;
@@ -36,10 +29,7 @@ var valEmail = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 	        }else if ( $("#country").val() == "" || nombre.test($("#country").val()) ){
 	            $("#country").after("<span class='error'>Ingrese el país de residencia</span>");
 	            return false;
-			}else{
-        	$("#account").attr("href","index2.html");
-        	}
+			}
 	    });
 	 
-})
-
+});
