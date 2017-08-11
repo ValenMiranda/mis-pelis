@@ -20254,6 +20254,44 @@ if (jQuery) {
 })(jQuery);
 
 $(document).ready(function(){
+
+});
+/*
+esto es lo que probe en un comienzo pero no funciono
+
+
+var seleccion = document.getElementsByTagName("select");
+var boton = document.getElementById("boton");
+	boton.addEventListener("click", function(){
+	var valorSelect = seleccion[2].value;
+		if(seleccion[2].value == "2"){
+			alert("Funciona");
+			var title = document.getElementById("inputTitle").value;
+
+	$.ajax({
+		url: 'https://netflixroulette.net/api/api.php?title=' + title,
+		type: 'GET',
+		dataType: 'json',
+	})
+	.done(function(e) {
+		console.log(e.show_title);
+		console.log("success");
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+		}else{
+			alert("mal!!");
+		}
+		console.log(seleccion[2].value);
+})
+*/
+
+/*Comienza seccion nombre de titulo*/
+$(document).ready(function(){
 	$(".j_select").change(function(){
 		var j_dir = $(".j_select").val();
 		if(j_dir == "1" || j_dir == "2"){
@@ -20291,55 +20329,3 @@ $(document).ready(function(){
 	});
 
 });
-
-
-
-/*inica la parte Nombre titulo*/
-	/*var title = $("#inputTitle").val()
-
-	$.ajax({
-		url: 'https://netflixroulette.net/api/api.php?title=' + title,
-		type: 'GET',
-		dataType: 'json',
-	})
-	.done(function(e) {
-		console.log(e.show_title);
-		console.log("success");
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
-/*termina la parte Nombre Titulo*/
-
-/*var seleccion = document.getElementsByTagName("select");
-var boton = document.getElementById("boton");
-	boton.addEventListener("click", function(){
-	var valorSelect = seleccion[2].value;
-		if(seleccion[2].value == "2"){
-			alert("Funciona");
-			var title = document.getElementById("inputTitle").value;
-
-	$.ajax({
-		url: 'https://netflixroulette.net/api/api.php?title=' + title,
-		type: 'GET',
-		dataType: 'json',
-	})
-	.done(function(e) {
-		console.log(e.show_title);
-		console.log("success");
-	})
-	.fail(function() {
-		console.log("error");
-	})
-	.always(function() {
-		console.log("complete");
-	});
-		}else{
-			alert("mal!!");
-		}
-		console.log(seleccion[2].value);
-})
-*/
