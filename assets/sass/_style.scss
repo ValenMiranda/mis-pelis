@@ -31,7 +31,19 @@ body{
 	}
 }
 
-	font-family: 'Anton', sans-serif;
+/*comienza seccion Nombre titulo*/
+.j-nav{
+	background-color: #2b2c30;
+	height: 100px;
+	padding-top: 1px;
+	h4{
+		color: #8a8b8d;
+		text-align: center;
+	}
+}
+
+/*Termina seccion nombre titulo*/
+
 }
 .m_select{
 	font-size: 2em;
@@ -65,4 +77,5 @@ body{
 	}
 }
 }
+
 

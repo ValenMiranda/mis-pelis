@@ -1,3 +1,8 @@
+
+$(document).ready(function(){
+
+});
+
 $( document ).ready(function(){
 	$(".button-collapse").sideNav();
 
@@ -29,3 +34,4 @@ var valEmail = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
 	    });
 	 
 })
+

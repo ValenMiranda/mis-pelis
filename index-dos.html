@@ -9,6 +9,26 @@
 </head>
 <body>
 
+	<div class="j-nav">
+		<h4>Nombre de Pelicula</h4>
+	</div>
+
+<!--SECCION NOMBRE TITULO-->
+	<section>
+		<select class="browser-default j_select">
+		    <option value="" disabled selected>CATEGORIAS</option>
+		    <option value="1">Director</option>
+		    <option value="2">Nombre de Pelicula</option>
+		    <option value="3">Category</option>
+		</select>
+
+		<input class="j_input" type="text" name="pelicula" hidden="hidden">
+		<button class="j_btn">Show</button>
+	</section>
+	<div class="j_show container"></div>
+<!-- TERMINA SECCION NOMBRE TITULO-->
+
+
 <section>
 	<select class="browser-default m_select">
 	    <option value="" disabled selected>Choose your option</option>
@@ -20,6 +40,7 @@
 	<button class="m_btn btn center-align">Show</button>
 </section>
 	<div class="m_show container"></div>
+
 
 
 	<script src="dist/js/script.js"></script>
