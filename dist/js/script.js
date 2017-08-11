@@ -20253,8 +20253,10 @@ if (jQuery) {
   };
 })(jQuery);
 
+
+
 $(document).ready(function() {
-/*
+
 	$(".m_select").change(function(){
 		var m_dir = $(".m_select").val();
 		if(m_dir == "1" || m_dir == "2"){
@@ -20264,7 +20266,7 @@ $(document).ready(function() {
 			$(".m_input").attr('pk').hide();
 		}
 	})
-*/
+
 
 $(".m_btn").click(function(e) {
 
@@ -20278,21 +20280,22 @@ $(".m_btn").click(function(e) {
 	.done(function(er) {
 		console.log("success");
 		er.forEach(function(e){
-			$(".m_show").append('<div><h4>'+e.show_title+'</h4>'+
-								'<img src="'+e.poster+'"">'+
-								'<h5> year: '+e.release_year+'</h5>'+
-								'<h5> category: '+e.category+'</h5>'+
-								'<h6> time: '+e.runtime+'</h6></div>')
+			$(".m_show").append('<div class="m_movie row"><div class="col s6"><h2 class="m_title">'+e.show_title+'</h2>'+
+								'<h4 class="m_year"> Year: '+e.release_year+'</h4>'+
+								'<h4 class="m_category"> Category: '+e.category+'</h4>'+
+								'<h4 class="m_time"> Time: '+e.runtime+'</h4></div>'+
+								'<div class="col s6"><img class="responsive-img m_img" src="'+e.poster+'"></div></div>')							
+								
 		})
 		
 	})
 	.fail(function() {
 		console.log("error");
 	})
-	.always(function() {
+	.always(function() { 
 		console.log("complete");
 	});
-
 		
 });
+
 });
