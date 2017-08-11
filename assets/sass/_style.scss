@@ -2,4 +2,18 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Anton', sans-serif;
+	box-sizing: border-box;
 }
+
+/*comienza seccion Nombre titulo*/
+.joselin-nav{
+	background-color: #2b2c30;
+	height: 100px;
+	padding-top: 1px;
+	h4{
+		color: #8a8b8d;
+		text-align: center;
+	}
+}
+
+/*Termina seccion nombre titulo*/
