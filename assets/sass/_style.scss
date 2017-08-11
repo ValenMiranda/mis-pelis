@@ -1,6 +1,34 @@
 *{
 	margin: 0;
 	padding: 0;
+
+	font-family: 'Anton', sans-serif;
+	border-sizing: border-box;
+}
+
+.categorias{
+	padding: 20px;
+	background-color: #F3F3F3;
+	color: #868686;
+}
+
+/***********************SECCIÓN PROFILE*****************************/
+
+.profile{
+	img.responsive-img.imagen-prof{
+		margin: 30px 5px;
+		height: 25vh;
+	}
+	.title-fav{
+		background-color: #C14748;
+		width: 100%;
+		margin: 0;
+	}
+	.pictures{
+
+	}
+}
+
 	
 }
 body{
@@ -77,5 +105,4 @@ body{
 	}
 }
 }
-
 
