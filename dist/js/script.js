@@ -20631,4 +20631,180 @@ $(document).ready(function() {
 	
 });
 
+/*
+esto es lo que probe en un comienzo pero no funciono
+
+
+var seleccion = document.getElementsByTagName("select");
+var boton = document.getElementById("boton");
+	boton.addEventListener("click", function(){
+	var valorSelect = seleccion[2].value;
+		if(seleccion[2].value == "2"){
+			alert("Funciona");
+			var title = document.getElementById("inputTitle").value;
+
+	$.ajax({
+		url: 'https://netflixroulette.net/api/api.php?title=' + title,
+		type: 'GET',
+		dataType: 'json',
+	})
+	.done(function(e) {
+		console.log(e.show_title);
+		console.log("success");
+
+
+$( document ).ready(function(){
+	$(".button-collapse").sideNav();
+
+	$('#cuenta').click(function(){
+		document.location.href = "create-account.html";
+	})
+
+/* VALIDACIONES */
+var nombre = /[0-9]/;
+var valEmail = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+
+	$("#account").click(function (){
+		console.log($('#name').val());
+	        if( $("#name").val() == "" || nombre.test($("#name").val()) ){
+	            $("#name").after("<span class='error'>Ingrese un nombre válido y/o  sin números</span>");
+	            return false;
+	        }else if( $("#username").val() == "" || nombre.test($("#username").val()) ){
+	            $("#username").after("<span class='error'>Ingrese un username valido y/o sin números</span>");
+	            return false;
+			}else if( $("#email").val() == "" || !valEmail.test($("#email").val()) ){
+	            $("#email").focus().after("<span class='error'>Ingrese un email válido</span>");
+	            return false;
+	        }else{
+        	$("#account").attr("href","index2.html");
+        	}
+	    });
+	$('.error').val(""); 
+})
+
+
+$(document).ready(function() {
+
+	$(".m_select").change(function(){
+		var m_dir = $(".m_select").val();
+		if(m_dir == "1" || m_dir == "2"){
+			$(".m_input").attr('pk', '1').show();
+		}
+		if(m_dir != "1"){
+			$(".m_input").attr('pk').hide();
+		}
+	})
+
+
+$(".m_btn").click(function(e) {
+
+	var m_director = $(".m_input").val()
+	var m_replace = m_director.replace(/\s/g,"%20")
+	$.ajax({
+		url: 'https://netflixroulette.net/api/api.php?director='+m_replace,
+		type: 'GET',
+		dataType: 'JSON',
+	})
+	.done(function(er) {
+		console.log("success");
+		
+		er.forEach(function(e){
+			var el_id = e.show_id;
+			$(".m_show").append('<div class="m_movie row"><div class="col s6"><a class="m_a modal-trigger" href="#'+el_id+'"><h2 class="m_title">'+e.show_title+'</h2></a>'+
+								'<h4 class="m_year"> Year: '+e.release_year+'</h4>'+
+								'<h4 class="m_category"> Category: '+e.category+'</h4>'+
+								'<h4 class="m_time"> Time: '+e.runtime+'</h4></div>'+
+								'<div class="col s6"><img class="responsive-img m_img" src="'+e.poster+'"></div></div>')							
+							
+		})
+
+			
+	})
+	.fail(function() {
+		console.log("error");
+	})
+
+	.always(function() {
+		console.log("complete");
+	});
+		}else{
+			alert("mal!!");
+		}
+		console.log(seleccion[2].value);
+})
+*/
+
+/*Comienza seccion nombre de titulo*/
+$(document).ready(function(){
+	$(".j_select").change(function(){
+		var j_dir = $(".j_select").val();
+		if(j_dir == "1" || j_dir == "2"){
+			$(".j_input").attr('pk', '2').show();
+		}
+		if(j_dir != "2"){
+			$(".j_input").attr('pk').hide();
+		}
+	})
+
+
+	$(".j_btn").click(function(e) {
+
+		var j_titulo = $(".j_input").val()
+		var j_replace = j_titulo.replace(/\s/g,"%20")
+		$.ajax({
+			url: 'https://netflixroulette.net/api/api.php?title='+j_replace,
+			type: 'GET',
+			dataType: 'JSON',
+		})
+		.done(function(er) {
+			console.log("success");
+			er.forEach(function(e){
+				$(".j_show").append('<div class="j_movie row"><div class="col s6"><h2 class="j_title">'+e.show_title+'</h2>');				
+			})
+			
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() { 
+			console.log("complete");
+		});
+			
+	});
+
+});
+
+	.always(function() { 
+		console.log("complete");
+	});
+		
+});
+});
+
+function modal(er){
+	er.forEach(function(v){
+	var el_id = v.show_id;
+				$(".m_a").click(function(cv){
+					var modal = ('<div id="'+el_id+'" class="modal">'+
+								    '<div class="modal-content">'+
+								      '<h4>'+cv.show_title+'</h4>'+
+								      '<p>'+cv.description+'</p>'+
+								    '</div>'+
+								    '<div class="modal-footer">'+
+								      '<a href="#!" class="modal-action modal-close btn-flat">Close</a>'+
+								    '</div>'+
+								 '</div>');
+
+					$('.modal').show();
+		 			$('body').append(modal);
+		  			$('.modal-close').on('click', function(e) {
+		  				$('.modal').remove();
+
+					});
+				})
+
+		})
+}
+
+
 
