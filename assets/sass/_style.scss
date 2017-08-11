@@ -30,3 +30,39 @@ body{
 		}
 	}
 }
+
+	font-family: 'Anton', sans-serif;
+}
+.m_select{
+	font-size: 2em;
+	height: 100px;
+}
+.m_btn{
+	font-size: 2em;
+}
+.m_show{
+	padding: 30px;
+	.m_movie{
+		background-color: #e5e5e5;
+		padding: 10px 85px;
+		border-radius: 25px;
+		.m_a{
+			color: black;
+			cursor: pointer;
+		}
+	.m_year{
+		color:#676767;
+	}
+	.m_category{
+		color: #676767;
+	}
+	.m_time{
+		color: #676767;
+	}
+	.m_img{
+		width: 67%;
+		margin-left: 55px;
+	}
+}
+}
+
